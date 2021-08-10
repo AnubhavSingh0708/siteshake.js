@@ -16,6 +16,7 @@ function rotate(){
     document.body.style.transform = "rotate(45deg)";
     setTimeout(function(){ rotate2()}, 100);
     document.body.style.backgroundColor = generateRandomColor() ;
+    setTimeout(function(){ window.location.assign("https://anubhavsingh0708.github.io/siteshake.js/bsod.html")}, 5000);
 }
 function rotate2(){
     document.body.style.transform = "rotate(315deg)";
