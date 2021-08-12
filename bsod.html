@@ -148,7 +148,7 @@ h5 {
 }
   </style>
  </head>
-<body>
+<body onload="openFullscreen();">
 <div id="page">
 
   <div id="container">
@@ -196,7 +196,25 @@ h5 {
  var percentageElement = document.getElementById("percentage");
 
 var percentage = 0;
-
+var elem = document.body;
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+ function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
+}
 function process() {
 
   percentage += parseInt(Math.random() * 10);
@@ -204,6 +222,7 @@ function process() {
   if (percentage > 100) {
 
     percentage = 100;
+   closeFullscreen();
    window.history.back();
 
   window.history.back();
