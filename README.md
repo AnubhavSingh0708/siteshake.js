@@ -7,5 +7,6 @@ just add this to the body of your html file
 </script
 ```
 and then rotate by calling function `rotate()`in javascript
+### this will not harm user's device
 ## probably the best at its work 
 # one of the world's most useless javascript framework
