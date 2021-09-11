@@ -10,7 +10,7 @@ function generateRandomColor()
     //random color will be freshly served
 
 }
-
+document.body.style.transition = "all 0.1s";
 
 function rotate(){
     document.body.style.transform = "rotate(45deg)";
